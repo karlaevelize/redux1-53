@@ -11,7 +11,7 @@
 - process the data
 - updates the state
 
-## Selectors**
+## Selectors
 
 - selects the date from Redux state
 - then you can display it on the screen
@@ -22,7 +22,7 @@
 2. Install Redux with `npm i react-redux`
 3. Create Redux store, something like:
 
-```
+```js
 // src/store/index.js
 import { combineReducers, createStore } from "redux";
 import balanceReducer from "./balance/reducer";
@@ -43,7 +43,7 @@ export default store;
 
 4. Write a reducer with something in the Initial State
 
-```
+```js
 // src/store/balance/reducer.js
 const initialState = {
   amount: 0,
