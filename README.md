@@ -16,7 +16,7 @@
 - selects the date from Redux state
 - then you can display it on the screen
 
-## Setting up a React-Redux app**
+## Setting up a React-Redux app
 
 1. `npx create-react-app`
 2. Install Redux with `npm i react-redux`
@@ -58,6 +58,14 @@ export default function reducer(state = initialState, action) {
 }
 ```
 
-5. Check the Redux Store on Chrome to make sure you can already see yourr state
+5. Check the Redux Store on Chrome to make sure you can already see your state. If not, double check your code or reach out to someone if you can't solve
 
 6. Happy coding :)
+
+## Redux Flow
+
+1. Write first your actions (with type and payload(if needed))
+2. Test them by importing and dispatching in a component
+3. Once you got the actions right, write a case in the reducer
+4. Check if your reducer is updating the state correctly
+5. You are good to go!
