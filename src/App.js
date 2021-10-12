@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectAmount } from "./store/balance/selectors"
+import { deposit, reset } from "./store/balance/actions"
 
 function App() {
+
+  const [ quantity, setQuantity ] = useState(0)
+  console.log("quantity", quantity)
+
+  const amount = useSelector(selectAmount)
+  console.log("amount", amount)
+
+  const dispatch = useDispatch()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My Redux App</h1>
+      <p><b>Balance:</b> {amount}</p>
+      <button onClick={() => dispatch(deposit(10))}>Deposit 10</button><br/><br/>
+      <button onClick={() => dispatch(reset())}>Reset Account</button><br/><br/>
+      Another amount: <input value={quantity} onChange={(event) => setQuantity(event.target.value)}/>
+      <button onClick={() => {
+        dispatch(deposit(parseInt(quantity)))
+        setQuantity("")
+      }}>OK</button>
     </div>
   );
 }

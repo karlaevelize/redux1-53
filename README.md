@@ -69,3 +69,9 @@ export default function reducer(state = initialState, action) {
 3. Once you got the actions right, write a case in the reducer
 4. Check if your reducer is updating the state correctly
 5. You are good to go!
+
+## Pure Functions
+
+1. Always returns the same values when passed the same arguments
+2. It has no side effects (nothing out of the scope, don't modify parameters)
+3. It only depends on its parameters (no variables out of the scope)
