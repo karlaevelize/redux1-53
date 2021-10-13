@@ -17,7 +17,7 @@ export default function reducer(state = initialState, action) {
         subjects: [
           ...state.subjects, 
           {
-            id: 6,
+            id: state.subjects.length + 1,
             name: action.payload
           }]
       }
