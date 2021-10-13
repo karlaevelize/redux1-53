@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectAmount } from "./store/balance/selectors"
 import { deposit, reset } from "./store/balance/actions"
+import { selectFavoritesWithSubjects } from "./store/selectors"
 
 function App() {
 
@@ -13,6 +14,10 @@ function App() {
 
   const amount = useSelector(selectAmount)
   // console.log("amount", amount)
+
+  //cross slice selector
+  const favoritesWithSubjects = useSelector(selectFavoritesWithSubjects)
+  console.log("ful", favoritesWithSubjects)
 
   const dispatch = useDispatch()
 
