@@ -5,3 +5,11 @@ export const addSubject = (data) => {
     payload: data
   }
 }
+
+export const deleteSubject = (id) => {
+  // console.log("id to delete", id)
+  return {
+    type: "SUBJECT/delete",
+    payload: id
+  }
+}

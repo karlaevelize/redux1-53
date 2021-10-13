@@ -7,3 +7,5 @@ export const selectPopularStudents = (reduxState) => {
 export const selectMaleStudents = (reduxState) => {
   return reduxState.students.students.filter(student => student.gender === "m")
 }
+
+export const selectFavorites = (reduxState) => reduxState.students.favorites

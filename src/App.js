@@ -9,10 +9,10 @@ import { deposit, reset } from "./store/balance/actions"
 function App() {
 
   const [ quantity, setQuantity ] = useState(0)
-  console.log("quantity", quantity)
+  // console.log("quantity", quantity)
 
   const amount = useSelector(selectAmount)
-  console.log("amount", amount)
+  // console.log("amount", amount)
 
   const dispatch = useDispatch()
 

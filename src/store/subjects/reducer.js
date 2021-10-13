@@ -11,7 +11,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case "SUBJECT/add": {
-      console.log("action", action.payload)
+      // console.log("action", action.payload)
       return {
         ...state,
         subjects: [
@@ -20,6 +20,15 @@ export default function reducer(state = initialState, action) {
             id: state.subjects.length + 1,
             name: action.payload
           }]
+      }
+    }
+    case "SUBJECT/delete": {
+      // console.log("action delete", action.payload)
+      const arrayWithDeletedSubject = state.subjects.filter(sub => sub.id != action.payload)
+      // console.log("new array", arrayWithDeletedSubject)
+      return {
+        ...state,
+        subjects: [...arrayWithDeletedSubject]
       }
     }
     default: {
