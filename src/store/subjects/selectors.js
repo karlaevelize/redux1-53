@@ -1,0 +1,1 @@
+export const selectSubjects = (reduxState) => reduxState.subjects.subjects

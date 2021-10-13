@@ -1,4 +1,6 @@
 import './App.css';
+import Students from './components/Students';
+import Subjects from './components/Subjects';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectAmount } from "./store/balance/selectors"
@@ -25,6 +27,8 @@ function App() {
         dispatch(deposit(parseInt(quantity)))
         setQuantity("")
       }}>OK</button>
+      {/* <Students/> */}
+      <Subjects/>
     </div>
   );
 }
